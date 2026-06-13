@@ -17,7 +17,7 @@ Through reading the challenge details, we know that we need to identify a runnin
 **Interacting with the shell:**
 
 Starting off with the provided link, we are brought to a website that mimics the shell. 
-
+![LocalConfession1](../assets/LocalConfession/LocalConfession1.png)
 **Scanning:**
 
 First thing I decided to do is to run 
