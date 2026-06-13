@@ -27,7 +27,7 @@ ps aux
 
 To see all the running programs on the system. 
 
-![LocalConfession2][/assets/LocalConfession/LocalConfession2.png]
+![LocalConfession2](/assets/LocalConfession/LocalConfession2.png)
 
 Running this, we see that there appears to be a python’s built in http server on port 3000 (The default port for Python HTTP server is 8000\)
 
@@ -39,7 +39,7 @@ curl localhost:3000
 
 This returns the following. 
 
-![LocalConfession3][/assets/LocalConfession/LocalConfession3.png]
+![LocalConfession3](/assets/LocalConfession/LocalConfession3.png)
 
 Inspecting the returned service, we can see that we have the directory .python\_history available to us. By directly traversing to this directory using curl
 
@@ -47,7 +47,7 @@ curl localhost:3000/.python\_history
 
 We get the following returned
 
-![LocalConfession4][/assets/LocalConfession/LocalConfession4.png]
+![LocalConfession4](/assets/LocalConfession/LocalConfession4.png)
 
 We can extract the flag from here,
 
