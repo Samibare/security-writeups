@@ -20,11 +20,11 @@ As the description suggests, we will be looking for a misconfigured binary that 
 
 Accessing the website that is provided by the challenge, we will be welcomed by an interactive shell.
 
-![][image1]
+![AwkwardPriveledge1](/assets/AwkwardPriveledge/AwkwardPriveledge1.png)
 
 By moving around what we have, we can see that we have 3 users in the home directory. Going to the user dev, we see that there is a flag.txt. 
 
-![][image2]
+![AwkwardPriveledge2](/assets/AwkwardPriveledge/AwkwardPriveledge2.png)
 
 However, when trying to read the flag through 
 
@@ -32,7 +32,7 @@ cat flag.txt
 
 We are told that we lack permission. 
 
-![][image3]
+![AwkwardPriveledge3](/assets/AwkwardPriveledge/AwkwardPriveledge3.png)
 
 **Scanning:** 
 
@@ -40,7 +40,7 @@ Since the cat command does not have high enough permission to read the flag, we 
 
 find / \-perm \-4000 2\>/dev/null
 
-![][image4]
+![AwkwardPriveledge4](/assets/AwkwardPriveledge/AwkwardPriveledge4.png)
 
 The command exposes that gawk has root privilege.
 
@@ -52,7 +52,7 @@ gawk ‘{print}’ flag.txt
 
 Running this will return the flag.
 
-![][image5]
+![AwkwardPriveledge5](/assets/AwkwardPriveledge/AwkwardPriveledge5.png)
 
 MetaCTF{awkw4rd\_pr1v1l3g3\_3sc4l4t10n}
 
