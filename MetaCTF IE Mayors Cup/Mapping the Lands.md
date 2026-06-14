@@ -7,13 +7,13 @@ Connect to our network with ssh \-p 7001 ctf-54df5c6deb99@ssh.dyn.mctf.io. See i
 **Scanning the network:**
 
 We can connect to the challenge with SSH.  
-**![][image1]**
+![MappingTheLands1](/assets/MappingTheLands/MappingTheLands1.png)
 
 I first identified my subnet by running
 
 ip a
 
-![][image2]
+![MappingTheLands2](/assets/MappingTheLands/MappingTheLands2.png)
 
 Which showed my IP as  192.168.0.215/24
 
@@ -24,7 +24,7 @@ So I scanned the target range for a live host
 With the IP range, we can use nmap to search for any live host and identify any open ports.  
 Through running  
 Nmap \-p- 192.168.0.0/24  
-![][image3]  
+![MappingTheLands3](/assets/MappingTheLands/MappingTheLands3.png)
 We identified that 192.168.0.72 is up and port 1029 is open, running ms-lsa. Nmap identified ms-lsa, which corresponds to MS-LSARPC.
 
 Accessing this port through curl, 
@@ -32,7 +32,7 @@ Accessing this port through curl,
 Curl 192.168.9.72:1029
 
 We get the following returned   
-![][image4]
+![MappingTheLands4](/assets/MappingTheLands/MappingTheLands4.png)
 
 Now we extract the flag MetaCTF{c4rt0gr4ph3r5\_d3light}
 
